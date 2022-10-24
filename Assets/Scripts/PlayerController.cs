@@ -20,10 +20,8 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            // Launch a projectile from the player
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
-        // Kept the player in bounds
         if (transform.position.x < -xRange)
         {
             transform.position = new Vector3 (-xRange, transform.position.y, transform.position.z);
